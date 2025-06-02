@@ -1,38 +1,153 @@
-.App {
-    text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark theme stats cards */
+.stats-card {
+  @apply bg-gradient-to-r from-gray-800 to-gray-700 border border-gray-600 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+.stats-card-total {
+  @apply bg-gradient-to-r from-purple-800 to-indigo-800 text-white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.stats-card-completed {
+  @apply bg-gradient-to-r from-green-800 to-emerald-800 text-white;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.stats-card-pending {
+  @apply bg-gradient-to-r from-yellow-800 to-orange-800 text-white;
 }
 
-.App-link {
-    color: #61dafb;
+.stats-card-overdue {
+  @apply bg-gradient-to-r from-red-800 to-pink-800 text-white;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Navigation items */
+.nav-item {
+  @apply px-4 py-2 rounded-xl transition-all duration-200 font-medium;
+}
+
+.nav-item-active {
+  @apply bg-purple-600 text-white shadow-lg;
+}
+
+.nav-item-inactive {
+  @apply text-gray-300 hover:text-white hover:bg-gray-700;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-purple-600 hover:bg-purple-700 text-white font-medium px-4 py-2 rounded-xl transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply bg-gray-700 hover:bg-gray-600 text-gray-200 font-medium px-4 py-2 rounded-xl transition-colors duration-200 border border-gray-600;
+}
+
+.btn-danger {
+  @apply bg-red-600 hover:bg-red-700 text-white font-medium px-4 py-2 rounded-xl transition-colors duration-200;
+}
+
+/* Form styles */
+.form-input {
+  @apply bg-gray-800 border border-gray-600 text-gray-100 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent;
+}
+
+.form-select {
+  @apply bg-gray-800 border border-gray-600 text-gray-100 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent;
+}
+
+/* Task card styles */
+.task-card {
+  @apply bg-gray-800 border border-gray-600 rounded-xl p-4 shadow-lg transition-all duration-200 hover:shadow-xl hover:border-purple-500;
+}
+
+.task-card-dragging {
+  @apply opacity-60 transform rotate-2;
+}
+
+/* Priority badges */
+.priority-high {
+  @apply bg-red-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.priority-medium {
+  @apply bg-yellow-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.priority-low {
+  @apply bg-green-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+}
+
+/* Status badges */
+.status-todo {
+  @apply bg-gray-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-progress {
+  @apply bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-completed {
+  @apply bg-green-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-approved {
+  @apply bg-purple-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal-content {
+  @apply bg-gray-800 border border-gray-600 rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl;
+}
+
+/* Kanban board styles */
+.kanban-column {
+  @apply bg-gray-800 border border-gray-600 rounded-xl p-4 min-h-96;
+}
+
+.kanban-header {
+  @apply text-lg font-semibold mb-4 text-gray-200 border-b border-gray-600 pb-2;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
