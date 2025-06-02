@@ -2,117 +2,148 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Dark theme stats cards */
+/* Arctic Blue + Slate Gray theme stats cards */
 .stats-card {
-  @apply bg-gradient-to-r from-gray-800 to-gray-700 border border-gray-600 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl;
+  @apply bg-gradient-to-r from-slate-800 to-slate-700 border border-slate-600 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl;
 }
 
 .stats-card-total {
-  @apply bg-gradient-to-r from-purple-800 to-indigo-800 text-white;
+  @apply bg-gradient-to-r from-cyan-800 to-teal-800 text-white;
 }
 
 .stats-card-completed {
-  @apply bg-gradient-to-r from-green-800 to-emerald-800 text-white;
+  @apply bg-gradient-to-r from-emerald-800 to-green-800 text-white;
 }
 
 .stats-card-pending {
-  @apply bg-gradient-to-r from-yellow-800 to-orange-800 text-white;
+  @apply bg-gradient-to-r from-amber-800 to-yellow-800 text-white;
 }
 
 .stats-card-overdue {
   @apply bg-gradient-to-r from-red-800 to-pink-800 text-white;
 }
 
-/* Navigation items */
+.stats-card-time {
+  @apply bg-gradient-to-r from-blue-800 to-indigo-800 text-white;
+}
+
+/* Navigation items with Arctic Blue theme */
 .nav-item {
   @apply px-4 py-2 rounded-xl transition-all duration-200 font-medium;
 }
 
 .nav-item-active {
-  @apply bg-purple-600 text-white shadow-lg;
+  @apply bg-cyan-600 text-white shadow-lg;
 }
 
 .nav-item-inactive {
-  @apply text-gray-300 hover:text-white hover:bg-gray-700;
+  @apply text-slate-300 hover:text-white hover:bg-slate-700;
 }
 
-/* Custom scrollbar for dark theme */
+/* Custom scrollbar for Arctic Blue theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f2937;
+  background: #1e293b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #6b7280;
+  background: #475569;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
+  background: #64748b;
 }
 
-/* Button styles */
+/* Button styles with Arctic Blue accents */
 .btn-primary {
-  @apply bg-purple-600 hover:bg-purple-700 text-white font-medium px-4 py-2 rounded-xl transition-colors duration-200;
+  @apply bg-cyan-600 hover:bg-cyan-700 text-white font-medium px-4 py-2 rounded-xl transition-colors duration-200;
 }
 
 .btn-secondary {
-  @apply bg-gray-700 hover:bg-gray-600 text-gray-200 font-medium px-4 py-2 rounded-xl transition-colors duration-200 border border-gray-600;
+  @apply bg-slate-700 hover:bg-slate-600 text-slate-200 font-medium px-4 py-2 rounded-xl transition-colors duration-200 border border-slate-600;
 }
 
 .btn-danger {
   @apply bg-red-600 hover:bg-red-700 text-white font-medium px-4 py-2 rounded-xl transition-colors duration-200;
 }
 
+.btn-success {
+  @apply bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-4 py-2 rounded-xl transition-colors duration-200;
+}
+
+.btn-warning {
+  @apply bg-amber-600 hover:bg-amber-700 text-white font-medium px-4 py-2 rounded-xl transition-colors duration-200;
+}
+
 /* Form styles */
 .form-input {
-  @apply bg-gray-800 border border-gray-600 text-gray-100 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent;
+  @apply bg-slate-800 border border-slate-600 text-slate-100 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent;
 }
 
 .form-select {
-  @apply bg-gray-800 border border-gray-600 text-gray-100 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent;
+  @apply bg-slate-800 border border-slate-600 text-slate-100 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent;
 }
 
 /* Task card styles */
 .task-card {
-  @apply bg-gray-800 border border-gray-600 rounded-xl p-4 shadow-lg transition-all duration-200 hover:shadow-xl hover:border-purple-500;
+  @apply bg-slate-800 border border-slate-600 rounded-xl p-4 shadow-lg transition-all duration-200 hover:shadow-xl hover:border-cyan-500;
 }
 
 .task-card-dragging {
   @apply opacity-60 transform rotate-2;
 }
 
-/* Priority badges */
+/* Priority badges with new color scheme */
 .priority-high {
   @apply bg-red-600 text-white px-2 py-1 rounded-full text-xs font-medium;
 }
 
 .priority-medium {
-  @apply bg-yellow-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+  @apply bg-amber-600 text-white px-2 py-1 rounded-full text-xs font-medium;
 }
 
 .priority-low {
-  @apply bg-green-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+  @apply bg-emerald-600 text-white px-2 py-1 rounded-full text-xs font-medium;
 }
 
 /* Status badges */
 .status-todo {
-  @apply bg-gray-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+  @apply bg-slate-600 text-white px-2 py-1 rounded-full text-xs font-medium;
 }
 
 .status-progress {
-  @apply bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+  @apply bg-cyan-600 text-white px-2 py-1 rounded-full text-xs font-medium;
 }
 
 .status-completed {
-  @apply bg-green-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+  @apply bg-emerald-600 text-white px-2 py-1 rounded-full text-xs font-medium;
 }
 
 .status-approved {
-  @apply bg-purple-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+  @apply bg-teal-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+}
+
+/* Template badges */
+.template-badge {
+  @apply bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+}
+
+/* Recurring task badges */
+.recurring-badge {
+  @apply bg-indigo-600 text-white px-2 py-1 rounded-full text-xs font-medium;
+}
+
+/* Time tracking styles */
+.time-tracker {
+  @apply bg-cyan-900 bg-opacity-50 border border-cyan-600 rounded-lg p-3;
+}
+
+.time-display {
+  @apply text-cyan-300 font-mono text-lg;
 }
 
 /* Modal overlay */
@@ -121,16 +152,68 @@
 }
 
 .modal-content {
-  @apply bg-gray-800 border border-gray-600 rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl;
+  @apply bg-slate-800 border border-slate-600 rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl;
 }
 
 /* Kanban board styles */
 .kanban-column {
-  @apply bg-gray-800 border border-gray-600 rounded-xl p-4 min-h-96;
+  @apply bg-slate-800 border border-slate-600 rounded-xl p-4 min-h-96;
 }
 
 .kanban-header {
-  @apply text-lg font-semibold mb-4 text-gray-200 border-b border-gray-600 pb-2;
+  @apply text-lg font-semibold mb-4 text-slate-200 border-b border-slate-600 pb-2;
+}
+
+/* Comments section */
+.comment-item {
+  @apply bg-slate-700 border border-slate-600 rounded-lg p-3 mb-3;
+}
+
+.comment-author {
+  @apply text-cyan-400 font-medium text-sm;
+}
+
+.comment-time {
+  @apply text-slate-400 text-xs;
+}
+
+.comment-text {
+  @apply text-slate-200 mt-2 text-sm;
+}
+
+/* Dependency indicators */
+.dependency-line {
+  @apply border-l-2 border-cyan-500 pl-3 ml-2;
+}
+
+.dependency-item {
+  @apply bg-cyan-900 bg-opacity-30 border border-cyan-600 rounded-lg p-2 text-cyan-300 text-sm;
+}
+
+/* Notification styles */
+.notification {
+  @apply fixed top-4 right-4 bg-slate-800 border border-cyan-500 rounded-lg p-4 shadow-lg z-50 max-w-sm;
+}
+
+.notification-success {
+  @apply border-emerald-500 bg-emerald-900 bg-opacity-50;
+}
+
+.notification-warning {
+  @apply border-amber-500 bg-amber-900 bg-opacity-50;
+}
+
+.notification-error {
+  @apply border-red-500 bg-red-900 bg-opacity-50;
+}
+
+/* Template selector */
+.template-item {
+  @apply bg-slate-700 border border-slate-600 rounded-lg p-3 cursor-pointer hover:border-cyan-500 transition-colors;
+}
+
+.template-item-selected {
+  @apply border-cyan-500 bg-cyan-900 bg-opacity-30;
 }
 
 /* Animation classes */
@@ -150,4 +233,14 @@
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.pulse-cyan {
+  animation: pulseCyan 2s infinite;
+}
+
+@keyframes pulseCyan {
+  0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(6, 182, 212, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
 }
