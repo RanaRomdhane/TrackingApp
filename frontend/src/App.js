@@ -70,7 +70,7 @@ function App() {
           <Route 
             path="/tasks" 
             element={
-              <TaskManager 
+              <EnhancedTaskManager 
                 tasks={tasks} 
                 refreshData={refreshData}
               />
