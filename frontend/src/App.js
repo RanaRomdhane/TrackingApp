@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "axios";
 import Dashboard from "./components/Dashboard";
-import TaskManager from "./components/TaskManager";
+import EnhancedTaskManager from "./components/EnhancedTaskManager";
 import ProjectManager from "./components/ProjectManager";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
