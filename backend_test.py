@@ -30,7 +30,7 @@ def print_result(test_name, success, response=None, error=None):
 def test_health_check():
     print_header("Testing Health Check Endpoint")
     try:
-        response = requests.get(f"{API_URL}/")
+        response = requests.get(f"{BACKEND_URL}/")
         success = response.status_code == 200 and "GTD Task Manager API is running" in response.json().get("message", "")
         print_result("Health Check", success, response.json())
         return success
